@@ -2,11 +2,11 @@
     --primary: #EB1CCC;
     --secundary: #95989A;
     --text-color: #FFF;
-    --text-secundary:#000;
+    --text-secundary: #000;
     --text-tertiary: #5d5d5d;
 }
 
-*{
+* {
     font-family: "Montserrat";
     margin: 0px;
     padding: 0px;
@@ -17,7 +17,7 @@
 /* Event form */
 
 #event-description {
-    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(img/hrz-5.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/hrz-5.jpg);
     background-position: center;
     background-size: cover;
     height: 85vh;
@@ -70,7 +70,7 @@
 .form-group {
     display: flex;
     flex-direction: column;
-    margin-bottom: 0.8em ;
+    margin-bottom: 0.8em;
 }
 
 .form-group label {
@@ -79,7 +79,8 @@
     font-weight: bold;
 }
 
-.form-group input, .form-group select {
+.form-group input,
+.form-group select {
     padding: 6px 8px;
     border-radius: 5px;
     border: none;
@@ -91,7 +92,7 @@
     color: var(--text-color);
     text-transform: uppercase;
     width: 100%;
-    border:none;
+    border: none;
     padding: 12px;
     cursor: pointer;
     opacity: .8;
@@ -134,10 +135,10 @@
     border-radius: 50%;
     background-size: cover;
     background-position: center;
-    margin-bottom: 1em; 
+    margin-bottom: 1em;
 }
 
- #benefit-1 {
+#benefit-1 {
     background-image: url(img/sqr-1.jpg);
 }
 
@@ -147,13 +148,13 @@
 
 #benefit-3 {
     background-image: url(img/sqr-3.jpg);
-} 
+}
 
 /*  location */
 
 #location {
     height: 400px;
-    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(img/hrz-1.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/hrz-1.jpg);
     background-position: center;
     background-size: cover;
     display: flex;
@@ -163,7 +164,8 @@
     margin-bottom: 3em;
 }
 
-#address, #about-location {
+#address,
+#about-location {
     max-width: 30%;
 }
 
@@ -225,7 +227,7 @@
 
 .detail-description {
     width: 100%;
-    padding-left:2em ;
+    padding-left: 2em;
 }
 
 .detail-description ul {
@@ -244,7 +246,7 @@
 
 #cta {
     height: 400px;
-    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(img/hrz-1.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/hrz-1.jpg);
     background-position: center;
     background-size: cover;
     display: flex;
@@ -263,7 +265,7 @@
 
 #cta .btn {
     width: 30%;
-    margin:0 auto;
+    margin: 0 auto;
     font-weight: 600;
     font-size: 1.2em;
 }
@@ -280,8 +282,8 @@
 }
 
 #footer h3 {
-font-size: 1.2em;
-margin-bottom: 0.5em;
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
 }
 
 #footer p:nth-child(2) {
@@ -296,6 +298,11 @@ margin-bottom: 0.5em;
 /* mobile */
 
 @media (max-width:450px) {
+
+    .btn {
+        opacity: 1;
+    }
+
     /* event form */
     #event-description {
         flex-direction: column;
@@ -305,7 +312,7 @@ margin-bottom: 0.5em;
     #disclaimer {
         padding: 2em;
     }
-    
+
     #disclaimer h2 {
         margin-bottom: 0.5em;
 
@@ -324,5 +331,85 @@ margin-bottom: 0.5em;
         align-items: center;
         width: auto;
         padding: 2em;
+    }
+
+    .benefit {
+        max-width: 100%;
+        margin-bottom: 2em;
+
+    }
+
+    /* event location */
+
+    #location {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+        padding: 2em 0;
+
+    }
+
+    #address {
+        order: 2;
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    #address i {
+        margin: .3em 0;
+    }
+
+    #about-location {
+        order: 1;
+        max-width: 100%;
+
+    }
+
+    #about-location h3 {
+        margin-bottom: 0;
+    }
+
+    #about-location p {
+        display: none;
+
+    }
+
+    /* event details container */
+
+    .detail {
+        flex-direction: column;
+        margin-bottom: .5em;
+        gap: 0;
+    }
+
+    .detail img {
+        width: 100%;
+        margin: 2em 0;
+    }
+
+    #detail-1 img {
+        display: none;
+    }
+
+    .detail-description {
+        padding: 0;
+    }
+
+    #detail-3 img {
+        order: 2;
+    }
+
+    #detail-3 .detail-description {
+        order: 1;
+    }
+
+    /* call to action section */
+
+    #cta {
+        text-align: center;
+    }
+
+    #cta .btn {
+        width: 80%;
     }
 }
